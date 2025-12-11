@@ -58,7 +58,7 @@ nav ul li a:hover , ul li a.active{
 /* hero section code start */
 
     .hero-section{
-        background-image: url(/assets/images/banner.jpg);
+        background-image: url(/assets/image/banner.jpg);
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
