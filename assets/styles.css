@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Montserrat;
+}
+nav{
+    display: flex;
+    background-color: #1c2833;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 50px 0 80px;
+    align-items: center;
+
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+nav ul{
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 8px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 0.5;
+    text-transform: uppercase;
+    
+    
+}
+nav ul li a:hover , ul li a.active{
+    background-color: #566573;
+}
+.menu-btn{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+/* hero section code start */
+
+    .hero-section{
+        background-image: url(/assets/images/banner.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+    }
+
+
+
+/* Responsiv work start */
+@media only screen and (max-width: 940px){
+    .menu-btn{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+
+    #click:checked ~ ul {
+        left: 0%;
+
+    }
+    nav ul li {
+        margin: 30px 0;
+    }
+    nav ul li a{
+        font-size: 22pxs;
+    }
+    nav ul li a:hover ,nav ul li a.activ{
+        background: none;
+        color: red;
+    }
+}
